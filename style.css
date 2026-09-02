@@ -429,3 +429,185 @@ body {
     }
 
 }
+/* =========================
+   PERSONAL PROJECTS
+========================= */
+
+.projects {
+    padding: 120px 8vw;
+    background-color: #0b0d0c;
+    border-top: 1px solid rgba(242, 239, 232, 0.12);
+}
+
+
+/* Section heading */
+
+.projects-small {
+    color: rgba(242, 239, 232, 0.55);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+
+.projects-heading h2 {
+    color: #f2efe8;
+
+    font-size: clamp(60px, 9vw, 150px);
+
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    letter-spacing: -6px;
+
+    max-width: 900px;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.project-category {
+    margin-top: 110px;
+}
+
+
+.category-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+    margin-bottom: 35px;
+
+    border-top: 1px solid rgba(242, 239, 232, 0.25);
+
+    border-bottom: 1px solid rgba(242, 239, 232, 0.12);
+}
+
+
+.category-title h3 {
+    font-size: clamp(24px, 3vw, 45px);
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+
+.category-title span {
+    color: #A78BFA;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   PINTEREST STYLE GRID
+========================= */
+
+.pinterest-grid {
+    column-count: 3;
+
+    column-gap: 20px;
+}
+
+
+.grid-item {
+    break-inside: avoid;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    background-color: #16161d;
+}
+
+
+.grid-item img {
+    width: 100%;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.grid-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .projects {
+        padding: 100px 6vw;
+    }
+
+
+    .pinterest-grid {
+        column-count: 2;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .projects {
+        padding: 90px 20px;
+    }
+
+
+    .projects-heading h2 {
+        font-size: clamp(55px, 15vw, 85px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .project-category {
+        margin-top: 70px;
+    }
+
+
+    .category-title {
+        margin-bottom: 20px;
+    }
+
+
+    .category-title h3 {
+        font-size: 25px;
+    }
+
+
+    .pinterest-grid {
+        column-count: 1;
+
+        column-gap: 0;
+    }
+
+
+    .grid-item {
+        margin-bottom: 15px;
+    }
+
+}
