@@ -917,7 +917,7 @@ body {
 @media (max-width: 768px) {
 
     .navbar {
-        position: relative;
+        position: fixed;
     }
 
     /* Show hamburger only on mobile */
