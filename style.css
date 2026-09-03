@@ -59,15 +59,23 @@ body {
 
 
 .logo {
-    color: #f2efe8;
+    
+    background: linear-gradient(
+        90deg,
+        #8A9A5B,
+        #C6B46A,
+        #F2E8C9
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
     text-decoration: none;
-
     font-size: 28px;
-
     font-weight: 600;
-
     letter-spacing: -2px;
+
 }
 
 
@@ -889,4 +897,62 @@ body {
         margin-top: 70px;
     }
 
+}
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #f2efe8;
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    /* Show hamburger only on mobile */
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    /* Hide navigation links initially */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        width: 180px;
+
+        display: none;
+        flex-direction: column;
+
+        gap: 20px;
+        padding: 25px;
+
+        background: rgba(15, 15, 15, 0.92);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(242, 239, 232, 0.15);
+    }
+
+    /* Show menu when hamburger is clicked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
 }
